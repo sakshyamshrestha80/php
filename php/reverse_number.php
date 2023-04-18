@@ -1,0 +1,34 @@
+<?php
+$n=$r=$o="";
+if(isset($_GET["btnCheck"]))
+{
+$n=$x=$_GET["txtNumber"];
+$r;
+$sum=0;
+while($x!=0)
+{
+$r=$x%10;
+$sum=$sum*10+$r;
+$x=floor($x/10);
+
+}
+echo $sum;
+
+}
+
+?>
+
+<html>
+<head>
+<title>Sum of digits</title>
+</head>
+<body>
+<form action="reverse_number.php" method="get">
+Enter a Number<input type="text" name="txtNumber" value="<?php echo $n; ?>"><br>
+
+<input type="submit" value="Check" name="btnCheck">
+reverse number:<input type="text" name="txtSum1" value="<?php echo $r; ?>"><br>
+<!-- palindrom or not:<input type="text" name="txtSum2" value="<?php echo $o; ?>"><br> -->
+</form>
+</body>
+</html>
